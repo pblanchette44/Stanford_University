@@ -20,11 +20,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOi-RY-Viq" customClass="faceView" customModule="Stanford_FaceIt" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MOi-RY-Viq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Egs-5m-odV"/>
+                            <constraint firstItem="MOi-RY-Viq" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="K2b-z0-Bbh"/>
+                            <constraint firstAttribute="trailing" secondItem="MOi-RY-Viq" secondAttribute="trailing" id="iFy-px-lpc"/>
+                            <constraint firstItem="MOi-RY-Viq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rdB-pQ-gP8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>
