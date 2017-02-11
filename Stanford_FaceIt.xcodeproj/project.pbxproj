@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4AF01DA71E4F759500F2E861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF01DA61E4F759500F2E861 /* AppDelegate.swift */; };
-		4AF01DA91E4F759500F2E861 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF01DA81E4F759500F2E861 /* ViewController.swift */; };
+		4AF01DA91E4F759500F2E861 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF01DA81E4F759500F2E861 /* FaceViewController.swift */; };
 		4AF01DAC1E4F759500F2E861 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF01DAA1E4F759500F2E861 /* Main.storyboard */; };
 		4AF01DAE1E4F759500F2E861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF01DAD1E4F759500F2E861 /* Assets.xcassets */; };
 		4AF01DB11E4F759500F2E861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF01DAF1E4F759500F2E861 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		4AF01DA31E4F759500F2E861 /* Stanford_FaceIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stanford_FaceIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF01DA61E4F759500F2E861 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4AF01DA81E4F759500F2E861 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AF01DA81E4F759500F2E861 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		4AF01DAB1E4F759500F2E861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AF01DAD1E4F759500F2E861 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AF01DB01E4F759500F2E861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				4AF01DA61E4F759500F2E861 /* AppDelegate.swift */,
-				4AF01DA81E4F759500F2E861 /* ViewController.swift */,
-				4AF01DAA1E4F759500F2E861 /* Main.storyboard */,
 				4AF01DAD1E4F759500F2E861 /* Assets.xcassets */,
 				4AF01DAF1E4F759500F2E861 /* LaunchScreen.storyboard */,
 				4AF01DB21E4F759500F2E861 /* Info.plist */,
+				4AF01DA81E4F759500F2E861 /* FaceViewController.swift */,
+				4AF01DAA1E4F759500F2E861 /* Main.storyboard */,
 			);
 			path = Stanford_FaceIt;
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AF01DA91E4F759500F2E861 /* ViewController.swift in Sources */,
+				4AF01DA91E4F759500F2E861 /* FaceViewController.swift in Sources */,
 				4AF01DA71E4F759500F2E861 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
