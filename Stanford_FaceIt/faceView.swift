@@ -12,6 +12,7 @@ class faceView: UIView {
 
     
     var scale:CGFloat = 0.90
+    var mouthCurvature:Double = 1.0
     
     var skullRadius:CGFloat{
         return min(bounds.size.width,bounds.size.height)/2
@@ -79,7 +80,25 @@ class faceView: UIView {
         
         let mouthRect = CGRect(x: skullCenter.x-mouthWidth/2, y: skullCenter.y+mouthOffset, width: mouthWidth, height: mouthHeight)
         
-        return UIBezierPath(rect:mouthRect)
+        
+        //let mouthCurvature = 1.0
+        let smileOffset = CGFloat(max(-1,min(mouthCurvature,1))) * mouthRect.height
+        
+        let start = CGPoint(x:mouthRect.minX,y:mouthRect.minY)
+        let end = CGPoint(x:mouthRect.maxX,y:mouthRect.minY)
+        let cp1 = CGPoint(x:mouthRect.minX + mouthRect.width/3,y:mouthRect.minY + smileOffset)
+        let cp2 = CGPoint(x:mouthRect.maxX - mouthRect.width/3,y:mouthRect.minY + smileOffset)
+        
+        
+        let path = UIBezierPath()
+        
+        path.move(to: start)
+        
+        path.addCurve(to: end, controlPoint1: cp1, controlPoint2: cp2)
+        
+        path.lineWidth = 5.0
+        
+        return path
     }
     
     
