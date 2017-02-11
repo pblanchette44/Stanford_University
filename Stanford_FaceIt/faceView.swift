@@ -15,7 +15,7 @@ class faceView: UIView {
         var skullRadius = min(bounds.size.width,bounds.size.height)/2
         var skullCenter = CGPoint(x:bounds.midX,y:bounds.midY)
         
-        let skull = UIBezierPath(arcCenter: skullCenter, radius: skullRadius, startAngle: 0.0, endAngle: CGFloat(M_PI_2), clockwise: false)
+        let skull = UIBezierPath(arcCenter: skullCenter, radius: skullRadius, startAngle: 0.0, endAngle: CGFloat(2*M_PI), clockwise: false)
     
         skull.lineWidth = 5.0
         UIColor.blue.set()
