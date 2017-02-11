@@ -70,6 +70,18 @@ class faceView: UIView {
         return pathForCircleCenteredAtPoint(midPoint: eyeCenter, withRadius: eyeRadius)
     }
     
+    private func pathForMouth()->UIBezierPath{
+        
+        let mouthWidth = skullRadius/Ratios.SkullRadiusToMouthWidth
+        let mouthHeight = skullRadius/Ratios.SkullRadiusToMouthHeight
+        let mouthOffset = skullRadius/Ratios.SkullRadiusToEyeOffset
+        
+        
+        let mouthRect = CGRect(x: skullCenter.x-mouthWidth/2, y: skullCenter.y+mouthOffset, width: mouthWidth, height: mouthHeight)
+        
+        return UIBezierPath(rect:mouthRect)
+    }
+    
     
     override func draw(_ rect: CGRect) {
         
@@ -77,7 +89,7 @@ class faceView: UIView {
         pathForCircleCenteredAtPoint(midPoint: skullCenter, withRadius: skullRadius).stroke()
         pathForEye(eye: .Left).stroke()
         pathForEye(eye: .Right).stroke()
-        
+        pathForMouth().stroke()
     }
     
 
