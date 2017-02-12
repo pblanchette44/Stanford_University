@@ -14,15 +14,16 @@ import UIKit
 class faceView: UIView
 {
     @IBInspectable var scale:CGFloat = 0.90 {didSet{ setNeedsDisplay()}}
-    @IBInspectable var mouthCurvature:Double = 1.0
+    @IBInspectable var mouthCurvature:Double = 1.0 {didSet{ setNeedsDisplay()}}
     
-    @IBInspectable var eyesOpen:Bool = true
+    @IBInspectable var eyesOpen:Bool = true {didSet{ setNeedsDisplay()}}
     
-    @IBInspectable var eyeBrowTilt:Double = 0.0
+    @IBInspectable var eyeBrowTilt:Double = 0.0 {didSet{ setNeedsDisplay()}}
+    
     
     
     @IBInspectable  var skullRadius:CGFloat{
-        return min(bounds.size.width,bounds.size.height)/2
+        return (min(bounds.size.width,bounds.size.height)/2)*scale
     }
     @IBInspectable var skullCenter:CGPoint{
         return CGPoint(x:bounds.midX,y:bounds.midY)
@@ -30,7 +31,8 @@ class faceView: UIView
     
     
     func changeScale(recognizer:UIPinchGestureRecognizer){
-        switch recognizer.state{
+        
+        switch recognizer.state {
             case .changed,.ended:
                 scale *= recognizer.scale
                 recognizer.scale = 1.0

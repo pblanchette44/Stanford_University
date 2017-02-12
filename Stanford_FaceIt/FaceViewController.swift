@@ -19,8 +19,10 @@ class FaceViewController: UIViewController {
     
     @IBOutlet var faceView: faceView! {
         didSet{
+            faceView.addGestureRecognizer(UIPinchGestureRecognizer(target:faceView,action: #selector(faceView.changeScale(recognizer:)))
+            )
             updateUI()
-            faceView.addGestureRecognizer(UIPinchGestureRecognizer(target: faceView,action: #selector(faceView.changeScale(recognizer:))))
+            
         }
     }
     
