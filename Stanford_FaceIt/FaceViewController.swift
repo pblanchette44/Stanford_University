@@ -19,13 +19,38 @@ class FaceViewController: UIViewController {
     
     @IBOutlet var faceView: faceView! {
         didSet{
+            
             faceView.addGestureRecognizer(UIPinchGestureRecognizer(target:faceView,action: #selector(faceView.changeScale(recognizer:)))
             )
+            
+            let happierSwiperGestureRecognizer = UISwipeGestureRecognizer(
+                target:self,
+                action: #selector(FaceViewController.increaseHappiness)
+            )
+            
+            happierSwiperGestureRecognizer.direction = .up
+            faceView.addGestureRecognizer(happierSwiperGestureRecognizer)
+            
+            let sadderSwiperGestureRecognizer = UISwipeGestureRecognizer(
+                target:self,
+                action: #selector(FaceViewController.decreaseHappiness)
+            )
+            
+            sadderSwiperGestureRecognizer.direction = .down
+            faceView.addGestureRecognizer(sadderSwiperGestureRecognizer)
+            
+            
             updateUI()
             
         }
     }
     
+    func increaseHappiness(){
+        expression.mouth = expression.mouth.happierMouth()
+    }
+    func decreaseHappiness(){
+        expression.mouth = expression.mouth.sadderMouth()
+    }
     
     //Mouth dictionnary
     private var mouthCurvatures = [
