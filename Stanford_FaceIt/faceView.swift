@@ -8,16 +8,23 @@
 
 import UIKit
 
-class faceView: UIView {
 
+@IBDesignable
+
+class faceView: UIView
+{
+    @IBInspectable var scale:CGFloat = 0.90 {didSet{self.setNeedsDisplay()}}
+    @IBInspectable var mouthCurvature:Double = 1.0
     
-    var scale:CGFloat = 0.90
-    var mouthCurvature:Double = 1.0
+    @IBInspectable var eyesOpen:Bool = true
     
-    var skullRadius:CGFloat{
+    @IBInspectable var eyeBrowTilt:Double = 0.0
+    
+    
+    @IBInspectable  var skullRadius:CGFloat{
         return min(bounds.size.width,bounds.size.height)/2
     }
-    var skullCenter:CGPoint{
+    @IBInspectable var skullCenter:CGPoint{
         return CGPoint(x:bounds.midX,y:bounds.midY)
     }
     
@@ -29,6 +36,7 @@ class faceView: UIView {
         static let SkullRadiusToMouthWidth: CGFloat = 1
         static let SkullRadiusToMouthHeight: CGFloat = 3
         static let SkullRadiusToMouthOffset: CGFloat = 3
+        
     }
     
     private enum Eye {
@@ -68,7 +76,15 @@ class faceView: UIView {
     {
         let eyeRadius = skullRadius/Ratios.SkullRadiusToEyeRadius
         let eyeCenter = getEyeCenter(eye: eye)
+        if(eyesOpen){
         return pathForCircleCenteredAtPoint(midPoint: eyeCenter, withRadius: eyeRadius)
+        } else {
+            let path = UIBezierPath()
+            path.move(to: CGPoint(x: eyeCenter.x-eyeRadius,y:eyeCenter.y))
+            path.addLine(to: CGPoint(x:eyeCenter.x+eyeRadius,y:eyeCenter.y))
+            path.lineWidth = 5
+            return path
+        }
     }
     
     private func pathForMouth()->UIBezierPath{
@@ -100,6 +116,7 @@ class faceView: UIView {
         
         return path
     }
+    
     
     
     override func draw(_ rect: CGRect) {
