@@ -13,7 +13,7 @@ import UIKit
 
 class faceView: UIView
 {
-    @IBInspectable var scale:CGFloat = 0.90 {didSet{self.setNeedsDisplay()}}
+    @IBInspectable var scale:CGFloat = 0.90 {didSet{ setNeedsDisplay()}}
     @IBInspectable var mouthCurvature:Double = 1.0
     
     @IBInspectable var eyesOpen:Bool = true

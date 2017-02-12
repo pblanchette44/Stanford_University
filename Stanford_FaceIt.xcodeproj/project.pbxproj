@@ -13,6 +13,7 @@
 		4AF01DAE1E4F759500F2E861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF01DAD1E4F759500F2E861 /* Assets.xcassets */; };
 		4AF01DB11E4F759500F2E861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF01DAF1E4F759500F2E861 /* LaunchScreen.storyboard */; };
 		4AF01DB91E4F77E500F2E861 /* faceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF01DB81E4F77E500F2E861 /* faceView.swift */; };
+		4AF01DFD1E50CF7200F2E861 /* facialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF01DFC1E50CF7200F2E861 /* facialExpression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4AF01DB01E4F759500F2E861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AF01DB21E4F759500F2E861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AF01DB81E4F77E500F2E861 /* faceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = faceView.swift; sourceTree = "<group>"; };
+		4AF01DFC1E50CF7200F2E861 /* facialExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = facialExpression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				4AF01DAF1E4F759500F2E861 /* LaunchScreen.storyboard */,
 				4AF01DB21E4F759500F2E861 /* Info.plist */,
 				4AF01DA81E4F759500F2E861 /* FaceViewController.swift */,
+				4AF01DFC1E50CF7200F2E861 /* facialExpression.swift */,
 				4AF01DB81E4F77E500F2E861 /* faceView.swift */,
 				4AF01DAA1E4F759500F2E861 /* Main.storyboard */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AF01DA91E4F759500F2E861 /* FaceViewController.swift in Sources */,
+				4AF01DFD1E50CF7200F2E861 /* facialExpression.swift in Sources */,
 				4AF01DB91E4F77E500F2E861 /* faceView.swift in Sources */,
 				4AF01DA71E4F759500F2E861 /* AppDelegate.swift in Sources */,
 			);
@@ -306,6 +310,7 @@
 				4AF01DB71E4F759500F2E861 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
