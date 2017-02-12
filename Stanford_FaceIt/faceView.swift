@@ -29,6 +29,16 @@ class faceView: UIView
     }
     
     
+    func changeScale(recognizer:UIPinchGestureRecognizer){
+        switch recognizer.state{
+            case .changed,.ended:
+                scale *= recognizer.scale
+                recognizer.scale = 1.0
+            default:
+                break
+        }
+    }
+    
     private struct Ratios{
         
         static let SkullRadiusToEyeOffset: CGFloat = 3
