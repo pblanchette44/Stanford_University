@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mF6-im-EJG">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c8Y-H6-LGa">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="MOi-RY-Viq" customClass="faceView" customModule="Stanford_FaceIt" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -59,25 +59,20 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1201" y="-133"/>
+            <point key="canvasLocation" x="1952" y="840"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="EBT-KA-BFs">
+        <!--Split View Controller-->
+        <scene sceneID="P75-nU-V4U">
             <objects>
-                <tabBarController id="mF6-im-EJG" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="hl7-Vn-dTe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
+                <splitViewController id="c8Y-H6-LGa" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="y4A-cf-dqc"/>
-                        <segue destination="9sV-ig-i2Y" kind="relationship" relationship="viewControllers" id="oMM-AB-WPi"/>
+                        <segue destination="9sV-ig-i2Y" kind="relationship" relationship="masterViewController" id="si3-vb-jch"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="zae-GB-UkO"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nYy-4R-KK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifq-r0-mB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="198"/>
+            <point key="canvasLocation" x="422" y="916"/>
         </scene>
         <!--Emotion Selection-->
         <scene sceneID="bH2-tb-AOX">
@@ -88,31 +83,43 @@
                         <viewControllerLayoutGuide type="bottom" id="swv-N9-wlQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vdo-Tt-YTb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fP0-ai-HhA">
-                                <rect key="frame" x="118" y="249" width="139" height="168"/>
+                                <rect key="frame" x="137.66666666666669" y="284" width="139.00000000000006" height="168"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpm-UT-S0A">
-                                        <rect key="frame" x="0.0" y="0.0" width="139" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="139.00000000000003" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Angry"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="angry" id="e2y-mL-IyH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nH-Yh-blP">
-                                        <rect key="frame" x="0.0" y="42" width="139" height="42"/>
+                                        <rect key="frame" x="0.0" y="42" width="139.00000000000003" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Happy"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="happy" id="0Po-zw-avL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyl-P9-dEp">
-                                        <rect key="frame" x="0.0" y="84" width="139" height="42"/>
+                                        <rect key="frame" x="0.0" y="84" width="139.00000000000003" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Worried"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="worried" id="9h4-xV-LEI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNO-Jd-dJI">
-                                        <rect key="frame" x="0.0" y="126" width="139" height="42"/>
+                                        <rect key="frame" x="0.0" y="126" width="139.00000000000003" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Mischievous"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="mischievous" id="IIm-9T-HVf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -127,7 +134,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rbd-eu-j6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1201" y="563"/>
+            <point key="canvasLocation" x="1177" y="430"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IIm-9T-HVf"/>
+    </inferredMetricsTieBreakers>
 </document>

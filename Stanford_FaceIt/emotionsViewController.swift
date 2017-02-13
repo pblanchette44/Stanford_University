@@ -10,18 +10,27 @@ import UIKit
 
 class emotionsViewController: UIViewController {
 
-  
+    private let emotionalFaces: Dictionary<String,facialExpression> = [
+    "angry":facialExpression(eyes:.Closed, eyeBrows:.Furrowed,mouth: .Frown),
+    "happy":facialExpression(eyes:.Open, eyeBrows:.Furrowed,mouth: .Smile),
+    "worried":facialExpression(eyes:.Closed, eyeBrows:.Furrowed,mouth: .Smirk),
+    "mischievous":facialExpression(eyes:.Closed, eyeBrows:.Furrowed,mouth: .Grin)
+    ]
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+   
+        let destinationvc = segue.destination
+        
+        if let facevc = destinationvc as? FaceViewController{
+         
+            if let identifier = segue.identifier{
+                if let expression = emotionalFaces[identifier]{
+                    facevc.expression = expression
+                }
+            }
+            
+        }
     }
-    */
+   
 
 }
