@@ -59,14 +59,14 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1952" y="840"/>
+            <point key="canvasLocation" x="3013" y="451"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="P75-nU-V4U">
             <objects>
                 <splitViewController id="c8Y-H6-LGa" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="9sV-ig-i2Y" kind="relationship" relationship="masterViewController" id="si3-vb-jch"/>
+                        <segue destination="buW-9K-np8" kind="relationship" relationship="masterViewController" id="si3-vb-jch"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="zae-GB-UkO"/>
                     </connections>
                 </splitViewController>
@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="422" y="916"/>
         </scene>
-        <!--Emotion Selection-->
+        <!--Emotion selection-->
         <scene sceneID="bH2-tb-AOX">
             <objects>
                 <viewController id="9sV-ig-i2Y" customClass="emotionsViewController" customModule="Stanford_FaceIt" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,11 +130,30 @@
                             <constraint firstItem="fP0-ai-HhA" firstAttribute="centerX" secondItem="vdo-Tt-YTb" secondAttribute="centerX" id="Uya-5p-kOK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Emotion Selection" id="NRc-af-zfN"/>
+                    <navigationItem key="navigationItem" title="Emotion selection" id="05y-6X-Lbh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rbd-eu-j6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177" y="430"/>
+            <point key="canvasLocation" x="2084.057971014493" y="429.61956521739131"/>
+        </scene>
+        <!--Emotion Selection-->
+        <scene sceneID="ixP-uW-D3j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="buW-9K-np8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Emotion Selection" id="NRc-af-zfN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nag-ZE-5fD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9sV-ig-i2Y" kind="relationship" relationship="rootViewController" id="Rta-Lv-DQW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7qn-8x-TnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176.8115942028987" y="429.61956521739131"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
