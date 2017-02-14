@@ -40,11 +40,13 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func graphProgram() {
+        
+        
+    }
     @IBAction func touchDigit(_ sender: UIButton) {
         
         let digit = sender.currentTitle!
-        
-        
         
         if userIsTyping {
             let currentText = display.text!
@@ -79,5 +81,24 @@ class ViewController: UIViewController {
         displayInfo()
     }
     
+    var savedProgram : CalculatorBrain.PropertyList?
+    
+    @IBAction func getVarInMemory() {
+        brain.setOperand(variableName: "x")
+    }
+    @IBAction func storeVarInMemory() {
+        brain.variableValues["x"] = Double(displayValue)
+    }
+    @IBAction func save(_ sender: UIButton) {
+        savedProgram = brain.program
+    }
+    @IBAction func restore(_ sender: UIButton) {
+        
+        if savedProgram != nil{
+            brain.program = savedProgram!
+            displayValue = brain.result
+        }
+        
+    }
 }
 

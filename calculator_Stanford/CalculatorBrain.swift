@@ -17,12 +17,23 @@ class CalculatorBrain {
     
     private var internalProgram = [AnyObject]()
     
-    
     func setOperand(operand: Double) {
         updateDescription(input: String(operand))
         accumulator = operand
         internalProgram.append(operand as AnyObject)
     }
+    
+    var variableValues : Dictionary<String,Double> = ["x":0.0]
+    
+    func setOperand(variableName:String){
+        
+        updateDescription(input: variableName)
+        accumulator = variableValues[variableName]!
+        internalProgram.append(variableName as AnyObject)
+    }
+    
+    
+    
     
     private var operations:Dictionary<String,Operation> = [
         "π":    Operation.Constant(M_PI),
@@ -37,7 +48,6 @@ class CalculatorBrain {
         "C":    Operation.Reset,
         "+/-":  Operation.UnaryOperation({$0 * -1}),
         "%":    Operation.UnaryOperation({$0 / 100}),
-        "10ⁿ":  Operation.UnaryOperation({pow(10, $0)}),
         "x²":   Operation.UnaryOperation({pow($0, 2)})
     ]
     
@@ -65,9 +75,9 @@ class CalculatorBrain {
                         executePendingBinaryOperation()
             case    .Reset:
                         accumulator = 0.0
-                        description = ""
+                        description = " "
                         pendingOperation = nil
-                
+                        variableValues = ["x":0.0]
             }
         }
     }
@@ -91,10 +101,10 @@ class CalculatorBrain {
     
     private var pendingOperation :PendingBinaryOperationInfo?
         
-        struct PendingBinaryOperationInfo{
+    struct PendingBinaryOperationInfo{
             var binaryFunction: (Double,Double)->Double
             var firstOperand: Double
-        }
+    }
         
     private func updateDescription(input:String){
         
@@ -103,7 +113,6 @@ class CalculatorBrain {
         } else {
             description = input
         }
-        print(description!)
     }
     
     
@@ -125,6 +134,8 @@ class CalculatorBrain {
             }
         }
     }
+    
+    
     
     var result: Double {
         get{

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A6C0D1D1E53813C00465E55 /* graphCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C0D1C1E53813C00465E55 /* graphCalculator.swift */; };
+		4A6C0D1F1E53827300465E55 /* graphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C0D1E1E53827300465E55 /* graphView.swift */; };
 		4A8F4F5A1E499D2600A06F53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8F4F591E499D2600A06F53 /* AppDelegate.swift */; };
 		4A8F4F5C1E499D2600A06F53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8F4F5B1E499D2600A06F53 /* ViewController.swift */; };
 		4A8F4F5F1E499D2600A06F53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A8F4F5D1E499D2600A06F53 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A6C0D1C1E53813C00465E55 /* graphCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = graphCalculator.swift; sourceTree = "<group>"; };
+		4A6C0D1E1E53827300465E55 /* graphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = graphView.swift; sourceTree = "<group>"; };
 		4A8F4F561E499D2600A06F53 /* calculator_Stanford.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator_Stanford.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8F4F591E499D2600A06F53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A8F4F5B1E499D2600A06F53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				4A8F4F5B1E499D2600A06F53 /* ViewController.swift */,
 				4AB9F8591E4CD9B7000CBEB8 /* CalculatorBrain.swift */,
 				4A8F4F5D1E499D2600A06F53 /* Main.storyboard */,
+				4A6C0D1C1E53813C00465E55 /* graphCalculator.swift */,
+				4A6C0D1E1E53827300465E55 /* graphView.swift */,
 				4A8F4F591E499D2600A06F53 /* AppDelegate.swift */,
 				4A8F4F631E499D2600A06F53 /* Assets.xcassets */,
 				4A8F4F651E499D2600A06F53 /* LaunchScreen.storyboard */,
@@ -268,8 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6C0D1D1E53813C00465E55 /* graphCalculator.swift in Sources */,
 				4A8F4F5C1E499D2600A06F53 /* ViewController.swift in Sources */,
 				4A8F4F621E499D2600A06F53 /* calculator_Stanford.xcdatamodeld in Sources */,
+				4A6C0D1F1E53827300465E55 /* graphView.swift in Sources */,
 				4AB9F85A1E4CD9B7000CBEB8 /* CalculatorBrain.swift in Sources */,
 				4A8F4F5A1E499D2600A06F53 /* AppDelegate.swift in Sources */,
 			);
